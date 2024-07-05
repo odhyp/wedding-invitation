@@ -1,3 +1,4 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  {{ partial "landing.html" . }}
+  {{ partial "details.html" . }}
 {{ end }}
