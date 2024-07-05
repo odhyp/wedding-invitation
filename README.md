@@ -1,7 +1,3 @@
-# Theme Name
+# My Wedding Invitation
 
-## Features
-
-## Installation
-
-## Configuration
+A website for my wedding invitation :nerd_face::heart:
