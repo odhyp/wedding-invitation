@@ -1,3 +1,12 @@
 {{ define "main" }}
   {{ .Content }}
+  <hr>
+  <p>Invited guests:</p>
+  <ol>
+  {{ range .Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </li>
+  {{ end }}
+  </ol>
 {{ end }}
