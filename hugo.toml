@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://odhyp.github.io/wedding-invitation/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Anggi & Odhy - Wedding Invitation'
 
 [[menus.main]]
 name = 'Home'
