@@ -1,7 +1,13 @@
 {{ define "main" }}
-  <img class="logo" src="/wedding-invitation/img/pattern-logo.svg">
-  <h2>Dear, {{ .Title }}</h2>
-  <h3>You are invited<br>to the Wedding of</h3>
-  <h1>Anggi & Odhy</h1>
-  <a href="details">Open Invitation</a>
+  <section class="landing">
+    <img class="landing__logo" src="/wedding-invitation/img/pattern-logo.svg">
+    <div class="landing__text">
+      <h2 class="landing__text-byname" >Dear, {{ .Title }}</h2>
+      <h3 class="landing__text-greeting" >You are invited<br>to The Wedding of</h3>
+      <h1 class="landing__text-bride" >Anggi & Odhy</h1>
+    </div>
+    <div class="landing__cta">
+      <a class="btn btn-1" href="details">Open Invitation</a>
+    </div>
+  </section>
 {{ end }}
