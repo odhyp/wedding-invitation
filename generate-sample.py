@@ -13,10 +13,10 @@ def run_bash_command(command):
 
 def create_hugo_content(count):
     # Generate a list of Hugo new content commands
-    commands = [f"hugo new sample-list-{i}.md" for i in range(1, count + 1)]
+    commands = [f"hugo new sample-person-{i}" for i in range(1, count + 1)]
     for command in commands:
         # Run each command
         run_bash_command(command)
 
-# Example usage: create 5 sample lists
-create_hugo_content(10)
+# Example usage: create 9 sample lists
+create_hugo_content(9)
