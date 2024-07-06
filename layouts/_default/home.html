@@ -2,9 +2,15 @@
   {{ .Content }}
   <hr>
   <p>Invited guests:</p>
+
   <ol>
-  {{ range site.RegularPages }}
-    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-  {{ end }}
+    {{ range .Site.Sections }}
+      {{ if .File }}
+        {{ if eq .File.BaseFileName "_index" }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
   </ol>
+
 {{ end }}
