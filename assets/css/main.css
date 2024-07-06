@@ -121,8 +121,6 @@ body {
 /* --------------------------------------------------------
   3. Section and Containers
 -------------------------------------------------------- */
-.section {}
-
 .container {
   width: 100%;
   margin-left: auto;
@@ -131,41 +129,44 @@ body {
   padding-right: 1rem;
 
   border: 2px dashed green;
-  background-color: pink;
+}
+
+.section {
+  background-color: green;
 }
 
 /* xs */
 @media (min-width: 475px) {
   .container {
-    max-width: 475px;
+    max-width: 640px;
   }
 }
 
 /* sm */
 @media (min-width: 640px) {
   .container {
-    max-width: 640px;
+    max-width: 768px;
   }
 }
 
 /* md */
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 1024px;
   }
 }
 
 /* lg */
 @media (min-width: 1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 1280px;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    max-width: 1536px;
   }
 }
 
