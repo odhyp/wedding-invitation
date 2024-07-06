@@ -76,10 +76,10 @@ p, h1, h2, h3, h4, h5, h6 {
 -------------------------------------------------------- */
 :root {
   /* Colors */
-  --gold : ;
-  --navy : ;
-  --white: rgba(248, 248, 248, 1);
-  --black: rgba(51, 51, 51, 1);
+  --gold : hsl( 47,100%, 33%);
+  --navy : hsl(236, 58%, 26%);
+  --white: hsl(  0,  0%, 97%);
+  --black: hsl(  0,  0%, 20%);
 
   /* Font Family */
   --ff-mono: "JetBrains Mono", monospace;
