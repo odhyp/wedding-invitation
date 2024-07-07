@@ -125,8 +125,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 section {
@@ -134,8 +132,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid red;
-  margin-bottom: 2rem;
 }
 
 /* xs */
