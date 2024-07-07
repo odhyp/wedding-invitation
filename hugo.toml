@@ -1,4 +1,4 @@
-baseURL = 'https://odhy-wedding-invitation.vercel.app'
+baseURL = 'https://odhy-wedding-invitation.vercel.app/'
 title = 'Anggi & Odhy - Wedding Invitation'
 
 [module]
