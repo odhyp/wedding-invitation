@@ -6,3 +6,7 @@ title = 'Anggi & Odhy - Wedding Invitation'
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[taxonomies]
+  category = ""
+  tag = ""
