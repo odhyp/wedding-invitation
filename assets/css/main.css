@@ -188,3 +188,41 @@ a {
 /* --------------------------------------------------------
   5. Landing page
 -------------------------------------------------------- */
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.landing__logo {}
+
+.landing__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+  font-size: var(--size-base);
+  color: var(--navy);
+}
+
+.landing__text-byname {}
+
+.landing__text-greeting {}
+
+.landing__text-bride {
+  text-transform: uppercase;
+  color: var(--gold);
+  font-size: var(--size-3xl);
+}
+
+.landing__button {
+  font-size: var(--size-base);
+  padding: 0.75em 2em;
+  border-radius: 2em;
+  background-color: var(--navy);
+  color: var(--white);
+}
