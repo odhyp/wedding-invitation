@@ -127,13 +127,13 @@ body {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-
-  border: 2px dashed green;
+  background-image: url("/wedding-invitation/img/bg-texture.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.section {
-  background-color: green;
-}
+section {}
 
 /* xs */
 @media (min-width: 475px) {
