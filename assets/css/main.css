@@ -222,7 +222,25 @@ a {
 .landing__button {
   font-size: var(--size-base);
   padding: 0.75em 2em;
-  border-radius: 2em;
+  border-radius: 2rem;
   background-color: var(--navy);
   color: var(--white);
+  box-shadow: 4px 4px 4px #888;
+}
+
+.landing__pattern {
+  position: absolute;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.pattern-top {
+  top: 0;
+  height: 15vh;
+}
+
+.pattern-bottom {
+  bottom: 0;
+  height: 15vh;
+  transform: rotate(180deg);
 }
