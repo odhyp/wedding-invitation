@@ -1,5 +1,4 @@
 baseURL = 'https://odhy-wedding-invitation.vercel.app'
-languageCode = 'en-us'
 title = 'Anggi & Odhy - Wedding Invitation'
 
 [module]
