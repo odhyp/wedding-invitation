@@ -1,41 +1,49 @@
 {{ define "main" }}
-  <section>
-    <img class="logo" src="/wedding-invitation/img/placeholder-square.png">
-    <img class="sample_image" src="/wedding-invitation/img/placeholder-long.png">
-    <img class="sample_image" src="/wedding-invitation/img/placeholder-long.png">
-    <p>And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
-    <p>QS Ar-Rum : 21</p>
-    <img class="sample_image" src="/wedding-invitation/img/placeholder-long.png">
-    <img class="sample_image" src="/wedding-invitation/img/placeholder-long.png">
+
+  <section class="details details__opening">
+    <img class="landing__logo" src="/img/pattern-logo.svg">
+
+    <img class="details__opening-image" src="/img/placeholder-square.png">
+
+    <div class="details__opening-text">
+      <p>And it is among His sign that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</p>
+      <span>QS Ar-Rum : 21</span>
+    </div>
+
+    <img class="details__opening-image" src="/img/placeholder-square.png">
   </section>
 
-  <section>
-    <img class="logo" src="/wedding-invitation/img/placeholder-square.png">
-    <p>Together with the family,</p>
-    <h3>Anggi Permata Sukma Lembayung</h3>
-    <p>The daughter of Agung Heriyanto & Enny Prihjantini</p>
+  <section class="details details__main">
+    <img class="landing__logo" src="/img/pattern-logo.svg">
 
-    <span>and</span>
+    <div class="details__main-text-bride">
+      <p>Together with the family,</p>
 
-    <h3>Odhy Pradhana</h3>
-    <p>The daughter of Muhammad Mutohar & Tutik Andayani</p>
+      <h3>Anggi Permata Sukma Lembayung</h3>
+      <p>The daughter of Agung Heriyanto & Enny Prihjantini</p>
 
-    <p>We’d like to request the pleasure of your company <br> on our wedding day that will be held on:</p>
+      <span>and</span>
 
-    <h1>Wedding Ceremony</h1>
-    <h2>Saturday, October 5th 2024</h2>
-    <p>07.00 - 09.00</p>
-    <p>Bride's Residence</p>
-    <p>Madiun City</p>
+      <h3>Odhy Pradhana</h3>
+      <p>The son of Muhammad Mutohar & Tutik Andayani</p>
 
-    <h1>Wedding Reception</h1>
-    <h2>Sunday, October 6th 2024</h2>
-    <p>10.00 - 14.00</p>
-    <p>Gedung Serbaguna Tri Dharma</p>
-    <p>Jl. Cokroaminoto No. 63, Kota Madiun</p>
+      <p>We’d like to request the pleasure of your company <br> on our wedding day that will be held on:</p>
+    </div>
 
+    <div class="details__main-text-event">
+      <h2>Wedding Ceremony</h2>
+      <p>Saturday, October 5th 2024</p>
+      <p>07.00 - 09.00</p>
+      <p>Bride's Residence</p>
+      <p>Madiun</p>
+
+      <h2>Wedding Reception</h2>
+      <p>Sunday, October 6th 2024</p>
+      <p>10.00 - 14.00</p>
+      <p>Gedung Serbaguna Tri Dharma</p>
+      <p>Jl. Cokroaminoto No. 63, Madiun</p>
+    </div>
   </section>
-
 
   {{ partial "footer.html" . }}
 {{ end }}
