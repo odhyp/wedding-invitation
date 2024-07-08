@@ -255,3 +255,58 @@ a {
   height: 15vh;
   transform: rotate(180deg);
 }
+
+/* --------------------------------------------------------
+  6. Details page
+-------------------------------------------------------- */
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  height: 100svh;
+}
+
+/* Highlight every element containers ------------------ */
+.details > * {
+  border: 2px dashed red;
+}
+
+/* Opening section ------------------------------------- */
+.details__opening {
+/*  display: none;*/
+}
+
+.details__opening-image {
+  width: 150px;
+  height: auto;
+}
+
+.details__opening-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-inline: 2em;
+  text-align: center;
+  font-style: italic;
+}
+
+.details__opening-text span {
+  color: var(--gold);
+}
+
+/* Main section ---------------------------------------- */
+.details__main {}
+
+.details__main-text-bride {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.details__main-text-event {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
