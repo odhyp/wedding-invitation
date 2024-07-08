@@ -199,25 +199,33 @@ a {
   overflow: hidden;
 }
 
-.landing__logo {}
+.landing__logo {
+  width: var(--size-5xl);
+  height: auto;
+}
 
 .landing__text {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1em;
-  font-size: var(--size-base);
+  gap: 2.5em;
   color: var(--navy);
 }
 
-.landing__text-byname {}
+.landing__text-byname {
+  font-size: var(--size-xl);
+}
 
-.landing__text-greeting {}
+.landing__text-greeting {
+  font-size: var(--size-base);
+}
 
 .landing__text-bride {
   text-transform: uppercase;
   color: var(--gold);
   font-size: var(--size-3xl);
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px #888;
 }
 
 .landing__button {
@@ -232,6 +240,8 @@ a {
 .landing__pattern {
   position: absolute;
   object-fit: cover;
+  object-position: right;
+  width: 100%;
   overflow: hidden;
 }
 
