@@ -82,8 +82,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --black: hsl(  0,  0%, 20%);
 
   /* Font Family */
-  --ff-mono: "JetBrains Mono", monospace;
-  --ff-sans: "Inter", sans-serif;
+  --ff-serif: "Merriweather", serif;
 
   /* Sizes */
   --size-xxs : 0.5rem;
