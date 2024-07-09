@@ -262,12 +262,12 @@ a {
 -------------------------------------------------------- */
 .details {
   padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 /* Highlight every element containers ------------------ */
 .details > * {
   border: 2px dashed red;
+  margin-bottom: 4rem;
 }
 
 /* Opening section ------------------------------------- */
