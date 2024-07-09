@@ -197,10 +197,6 @@ a {
   5. Landing page
 -------------------------------------------------------- */
 .landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 4em;
   height: 100vh;
   height: 100svh;
@@ -213,10 +209,8 @@ a {
 }
 
 .landing__text {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   gap: 2.5em;
+  text-align: center;
 }
 
 .landing__text-byname {
@@ -267,10 +261,6 @@ a {
   6. Details page
 -------------------------------------------------------- */
 .details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   height: 100vh;
   height: 100svh;
 }
@@ -291,11 +281,9 @@ a {
 }
 
 .details__opening-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-inline: 2em;
+  gap: 1rem;
   text-align: center;
+  padding-inline: 2em;
   font-style: italic;
 }
 
@@ -308,12 +296,8 @@ a {
 
 .details__main-text-bride {
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .details__main-text-event {
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
