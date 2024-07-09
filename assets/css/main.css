@@ -295,8 +295,19 @@ a {
 
 .details__main-text-bride {
   text-align: center;
+  gap: 2em;
+  padding-inline: 1em;
+}
+
+.details__main-text-bride span {
+  color: var(--gold);
 }
 
 .details__main-text-event {
   text-align: center;
+  gap: 2rem;
+}
+
+.details__main-text-location {
+  gap: 0.25rem;
 }
