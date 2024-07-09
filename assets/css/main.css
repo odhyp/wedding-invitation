@@ -225,7 +225,7 @@ a {
   color: var(--gold);
   font-size: var(--size-3xl);
   letter-spacing: 0.1em;
-  text-shadow: 2px 2px 4px #888;
+  text-shadow: 2px 2px 4px #AAA;
 }
 
 .landing__button {
