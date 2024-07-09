@@ -261,8 +261,8 @@ a {
   6. Details page
 -------------------------------------------------------- */
 .details {
-  height: 100vh;
-  height: 100svh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 /* Highlight every element containers ------------------ */
