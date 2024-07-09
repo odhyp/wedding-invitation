@@ -119,6 +119,10 @@ body {
   color: var(--navy);
 }
 
+.text-gold {
+  color: var(--gold);
+}
+
 /* --------------------------------------------------------
   3. Section and Containers
 -------------------------------------------------------- */
@@ -223,7 +227,6 @@ a {
 
 .landing__text-bride {
   text-transform: uppercase;
-  color: var(--gold);
   font-size: var(--size-3xl);
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 4px #AAA;
@@ -286,10 +289,6 @@ a {
   padding-inline: 2em;
 }
 
-.details__opening-text span {
-  color: var(--gold);
-}
-
 /* Main section ---------------------------------------- */
 .details__main {}
 
@@ -297,10 +296,6 @@ a {
   text-align: center;
   gap: 2em;
   padding-inline: 1em;
-}
-
-.details__main-text-bride span {
-  color: var(--gold);
 }
 
 .details__main-text-event {
