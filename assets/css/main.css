@@ -186,6 +186,13 @@ a {
   text-decoration: none;
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* --------------------------------------------------------
   5. Landing page
 -------------------------------------------------------- */
