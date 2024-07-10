@@ -273,6 +273,20 @@ a {
   margin-bottom: 4rem;
 }
 
+/* Embelishment ---------------------------------------- */
+.details__embelishment {
+  content: "";
+  background-image: url("/img/pattern-side-2.svg");
+  background-position: left;
+  background-repeat: repeat-y;
+  z-index: 1;
+  width: 2rem;
+  height: 200vh;
+  position: absolute;
+  right: 0;
+  overflow-y: hidden;
+}
+
 /* Opening section ------------------------------------- */
 .details__opening {
 /*  display: none;*/
