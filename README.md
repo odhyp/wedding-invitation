@@ -2,8 +2,9 @@
 
 A website for my wedding invitation :nerd_face::heart:
 
-## How to add new invitation
+## How to generate invitation
 
-1. Run hugo `new` command and insert the person's name: `hugo new person-name`
-2. The url slug will automatically match the file name
-3. Manually replace the Title parameter in each page to the desirec name
+1. Create `invited.txt` file inside `data/`
+2. Write all the invited guests, each in the different lines
+3. Run `generate-invitation.py`
+4. Content will be generated inside the `content/` directories
