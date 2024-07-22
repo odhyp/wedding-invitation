@@ -251,14 +251,43 @@ a {
 
 .pattern-top {
   top: 0;
+  object-position: bottom;
   height: 12vh;
 }
 
 .pattern-bottom {
   bottom: 0;
+  object-position: bottom;
   height: 12vh;
   transform: rotate(180deg);
 }
+
+/* Responsive Breakpoints */
+/* xs */
+/*@media (min-width: 475px) {}*/
+
+/* sm */
+@media (min-width: 640px) {
+  .pattern-top {
+    height: 15vh;
+  }
+
+  .pattern-bottom {
+    height: 15vh;
+  }
+}
+
+/* md */
+/*@media (min-width: 768px) {}*/
+
+/* lg */
+/*@media (min-width: 1024px) {}*/
+
+/* xl */
+/*@media (min-width: 1280px) {}*/
+
+/* 2xl */
+/*@media (min-width: 1536px) {}*/
 
 /* --------------------------------------------------------
   6. Details page
