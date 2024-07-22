@@ -1,16 +1,35 @@
 {{ define "main" }}
-  {{ .Content }}
-  <hr>
-  <p>Invited guests:</p>
 
-  <ol>
-    {{ range .Site.Pages }}
-      {{ if and (eq .File.BaseFileName "_index") (ne .Layout "home") }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
+<section class="hero">
+  <div class="container fullscreen-page d-flex justify-content-center align-items-center text-center">
+    <div class="row">
+      <div class="col">
+        <h3>The Wedding Of</h3>
+        <h1 class="text-uppercase">Anggi & Odhy</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+Delete this section instead of just display: none.
+The data would still be there.
+Remove after development is completed/invitation is released.
+-->
+<section class="d-block">
+  <div class="container border my-5">
+    <p>Invited guests:</p>
+    <ol>
+      {{ range .Site.Pages }}
+        {{ if and (eq .File.BaseFileName "_index") (ne .Layout "home") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
       {{ end }}
-    {{ end }}
-  </ol>
+    </ol>
+  </div>
+</section>
 
 {{ end }}
