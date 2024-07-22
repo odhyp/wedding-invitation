@@ -288,6 +288,17 @@ a {
   overflow-y: hidden;
 }
 
+.test-side {
+  position: absolute;
+  object-fit: cover;
+  object-position: left;
+  overflow-y: hidden;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 2rem;
+}
+
 /* Opening section ------------------------------------- */
 .details__opening {
 /*  display: none;*/
