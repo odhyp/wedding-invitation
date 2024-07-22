@@ -251,12 +251,12 @@ a {
 
 .pattern-top {
   top: 0;
-  height: 15vh;
+  height: 12vh;
 }
 
 .pattern-bottom {
   bottom: 0;
-  height: 15vh;
+  height: 12vh;
   transform: rotate(180deg);
 }
 
