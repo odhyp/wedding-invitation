@@ -14,3 +14,37 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.pattern-image {
+  background-image: url("/img/pattern-top.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: top;
+}
+
+.pattern-top {
+  height: 90px;
+}
+
+.pattern-bottom {
+  height: 90px;
+  transform: rotate(180deg);
+}
+
+.pattern-image-y {
+  background-image: url("/img/pattern-side.svg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+
+.pattern-left {
+  width: 100px;
+  height: 100%;
+}
+
+.pattern-right {
+  width: 100px;
+  height: 100%;
+  transform: rotate(180deg);
+}

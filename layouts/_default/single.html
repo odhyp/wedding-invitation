@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="landing">
+<section class="landing position-relative">
   <div class="container">
     <div class="row fullscreen-page d-flex align-items-center">
       <div class="col-12 text-center d-flex flex-column align-items-center gap-5">
@@ -19,5 +19,14 @@
       </div>
     </div>
   </div>
+
+  <!-- Patterns - Top & Bottom -->
+  <div class="d-lg-none pattern-image pattern-top position-absolute top-0 col-12"></div>
+  <div class="d-lg-none pattern-image pattern-bottom position-absolute bottom-0 col-12"></div>
+
+  <!-- Patterns - Left & Right -->
+  <div class="d-none d-lg-block pattern-image-y pattern-left position-absolute top-0 start-0"></div>
+  <div class="d-none d-lg-block pattern-image-y pattern-right position-absolute top-0 end-0"></div>
+
 </section>
 {{ end }}
