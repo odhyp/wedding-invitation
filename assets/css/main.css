@@ -20,14 +20,12 @@ section {
   background-repeat: repeat-x;
   background-size: contain;
   background-position: top;
-}
-
-.pattern-top {
   height: 90px;
 }
+
+.pattern-top {}
 
 .pattern-bottom {
-  height: 90px;
   transform: rotate(180deg);
 }
 
@@ -36,15 +34,12 @@ section {
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
-}
-
-.pattern-left {
   width: 100px;
   height: 100%;
 }
+
+.pattern-left {}
 
 .pattern-right {
-  width: 100px;
-  height: 100%;
   transform: rotate(180deg);
 }
