@@ -7,3 +7,10 @@ body {
   height: 100svh;
   overflow: hidden;
 }
+
+section {
+  background-image: url("/img/bg-texture.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
