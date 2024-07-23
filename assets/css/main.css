@@ -10,7 +10,7 @@ body {
 
 section {
   background-image: url("/img/bg-texture.svg");
-  background-position: top right;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
