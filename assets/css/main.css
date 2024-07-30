@@ -53,3 +53,12 @@ section {
 .pattern-right {
   transform: rotate(180deg);
 }
+
+.pattern-details {
+  background-image: url("/img/pattern-side-2.svg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: top;
+  width: 40px;
+  height: 100%;
+}
