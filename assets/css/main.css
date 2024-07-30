@@ -1,5 +1,15 @@
+:root {
+  --font-main: hsl(236, 58%, 26%);
+  --font-gold: hsl( 47,100%, 33%);
+}
+
 body {
   font-family: "Merriweather", serif;
+  color: var(--font-main);
+}
+
+.text-gold {
+  color: var(--font-gold);
 }
 
 .fullscreen-page {
