@@ -1,71 +1,91 @@
 {{ define "main" }}
 
-  <img class="test-side" src="/img/pattern-side-2.svg">
+<div class="container-fluid position-relative px-0">
 
-  <section class="details details__opening flex-center">
-    <img class="landing__logo" src="/img/pattern-logo.svg">
+  <!-- Side Pattern -->
+  <div class="pattern-details position-absolute top-0 end-0"></div>
 
-    <img class="details__opening-image" src="/img/placeholder-square.png">
+  <!-- Section - Opening -->
+  <section class="details-opening">
+    <div class="row">
+      <div class="col-11 d-flex flex-column align-items-center gap-5 py-5">
+        <img class="" src="/img/pattern-logo.svg" width="50px">
 
-    <div class="details__opening-text flex-center">
-      <p><i>And it is among His signs that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</i></p>
-      <span class="text-gold">QS Ar-Rum : 21</span>
-    </div>
+        <img class="" src="/img/placeholder-long.png" width="300px">
 
-    <img class="details__opening-image" src="/img/placeholder-square.png">
-  </section>
+        <div class="text-center col-10">
+          <p><i>And it is among His signs that He has created for you wives from among yourselves, so that you may find tranquility in them and He has created love and kindness between you. Surely in this there are signs for a people who reflect.</i></p>
+          <span class="text-gold">QS Ar-Rum : 21</span>
+        </div>
 
-  <section class="details details__main flex-center">
-    <img class="landing__logo" src="/img/pattern-logo.svg">
+        <img class="" src="/img/placeholder-long.png" width="300px">
 
-    <div class="details__main-text-bride flex-center">
-      <p>Together with the family,</p>
-
-      <div>
-        <h3>Anggi Permata Sukma Lembayung</h3>
-        <p>The daughter of Agung Heriyanto & Enny Prihjantini</p>
-      </div>
-
-      <span class="text-gold"><i>and</i></span>
-
-      <div>
-        <h3>Odhy Pradhana</h3>
-        <p>The son of Muhammad Mutohar & Tutik Andayani</p>
-      </div>
-
-      <p>We’d like to request the pleasure of your company on our wedding day that will be held on:</p>
-    </div>
-
-    <div class="details__main-text-event flex-center">
-      <div class="details__main-text-location flex-center">
-        <h2 class="text-gold">Wedding Ceremony</h2>
-        <p>Saturday, October 5th 2024</p>
-        <p><strong>07.00 - 09.00</strong></p>
-        <p><strong>Bride's Residence</strong></p>
-        <p>Madiun</p>
-      </div>
-
-      <div class="details__main-text-location flex-center">
-        <h2 class="text-gold">Wedding Reception</h2>
-        <p>Sunday, October 6th 2024</p>
-        <p><strong>10.00 - 14.00</strong></p>
-        <p><strong>Gedung Serbaguna Tri Dharma</strong></p>
-        <p>Jl. Cokroaminoto No. 63, Madiun</p>
       </div>
     </div>
   </section>
+  
+  <!-- Section - Main -->
+  <section class="details-main">
+    <div class="row">
+      <div class="col-11 d-flex flex-column align-items-center gap-5 py-5">
+        <img class="" src="/img/pattern-logo.svg" width="50px">
 
-  <section class="details details__gallery flex-center">
-    <img class="landing__logo" src="/img/pattern-logo.svg">
+        <div class="details__main-text text-center d-flex flex-column align-items-center gap-4">
+          <p>Together with the family,</p>
 
-    <p><i>Many stars in the sky I see...</i></p>
+          <div class="col-10">
+            <h3 class="fw-bold">Anggi Permata Sukma Lembayung</h3>
+            <p>The daughter of Agung Heriyanto & Enny Prihjantini</p>
+          </div>
 
-    <img class="details__gallery-showcase" src="/img/placeholder-long.png">
-    <img class="details__gallery-showcase" src="/img/placeholder-long.png">
-    <img class="details__gallery-showcase" src="/img/placeholder-long.png">
+          <span class="text-gold mb-2"><i>and</i></span>
 
-    <p><i>...but no star is as beautiful as Odi.</i></p>
+          <div class="col-10">
+            <h3 class="fw-bold">Odhy Pradhana</h3>
+            <p>The son of Muhammad Mutohar & Tutik Andayani</p>
+          </div>
+
+          <p class="col-10 mt-4">We’d like to request the pleasure of your company on our wedding day that will be held on:</p>
+        </div>
+
+        <div class="details__main-event text-center d-flex flex-column gap-4">
+          <div class="">
+            <h2 class="text-gold">Wedding Ceremony</h2>
+            <p>Saturday, October 5th 2024</p>
+            <p class="fw-bold">07.00 - 09.00</p>
+            <p class="fw-bold">Bride's Residence</p>
+            <p>Madiun</p>
+          </div>
+
+          <div class="">
+            <h2 class="text-gold">Wedding Reception</h2>
+            <p>Sunday, October 6th 2024</p>
+            <p class="fw-bold">10.00 - 14.00</p>
+            <p class="fw-bold">Gedung Serbaguna Tri Dharma</p>
+            <p>Jl. Cokroaminoto No. 63, Madiun</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section - Gallery -->
+  <section class="details-gallery">
+    <div class="row">
+      <div class="col-12 d-flex flex-column align-items-center gap-5 py-5">
+        <img class="" src="/img/pattern-logo.svg" width="50px">
+
+        <p><i>Many stars in the sky I see...</i></p>
+
+        <img class="col-10" src="/img/placeholder-long.png" width="">
+
+        <p><i>...but no star is as beautiful as Odi.</i></p>
+      </div>
+    </div>
   </section>
 
   {{ partial "footer.html" . }}
+
+</div>
+
 {{ end }}
