@@ -3,11 +3,15 @@
   --font-gold: hsl( 47,100%, 33%);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Merriweather", serif;
   color: var(--font-main);
-  overflow-x: hidden;
   position: relative;
+  width: 100%;
 }
 
 .text-gold {
