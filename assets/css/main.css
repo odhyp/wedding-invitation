@@ -68,3 +68,7 @@ section {
   width: 40px;
   height: 100%;
 }
+
+.my__card {
+  border: 2px solid var(--font-main); !important;
+}
