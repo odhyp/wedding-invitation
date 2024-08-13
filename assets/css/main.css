@@ -1,363 +1,74 @@
-/*
-  Author : Odhy Pradhana
-  License: MIT License (2024-present)
-
-  Table of Contents
-  0. CSS Reset (by Josh W. Comeau)
-  1. Custom Properties
-  2. Global Styles
-  3. Section and Containers
-  4. Base Elements and Components
-  5. Landing page
-  6. Details page
-  7. 404 page
-  8. Footer
-*/
-
-/* Responsive Breakpoints */
-/* xs */
-/*@media (min-width: 475px) {}*/
-
-/* sm */
-/*@media (min-width: 640px) {}*/
-
-/* md */
-/*@media (min-width: 768px) {}*/
-
-/* lg */
-/*@media (min-width: 1024px) {}*/
-
-/* xl */
-/*@media (min-width: 1280px) {}*/
-
-/* 2xl */
-/*@media (min-width: 1536px) {}*/
-
-/* --------------------------------------------------------
-  0. CSS Reset (by Josh W. Comeau)
--------------------------------------------------------- */
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-#root, #__next {
-  isolation: isolate;
-}
-
-/* --------------------------------------------------------
-  1. Custom Properties
--------------------------------------------------------- */
 :root {
-  /* Colors */
-  --gold : hsl( 47,100%, 33%);
-  --navy : hsl(236, 58%, 26%);
-  --white: hsl(  0,  0%, 97%);
-  --black: hsl(  0,  0%, 20%);
-
-  /* Font Family */
-  --ff-serif: "Merriweather", serif;
-
-  /* Sizes */
-  --size-xxs : 0.5rem;
-  --size-xs  : 0.75rem;
-  --size-sm  : 0.875rem;
-  --size-base: 1rem;
-  --size-lg  : 1.125rem;
-  --size-xl  : 1.25rem;
-  --size-2xl : 1.5rem;
-  --size-3xl : 1.875rem;
-  --size-4xl : 2.25rem;
-  --size-5xl : 3rem;
-  --size-6xl : 3.75rem;
-  --size-7xl : 4.5rem;
-  --size-8xl : 6rem;
-  --size-9xl : 8rem;
-  --size-10xl: 10rem;
-
-  /* Other */
-  --border-radius: 4px;
+  --font-main: hsl(236, 58%, 26%);
+  --font-gold: hsl( 47,100%, 33%);
 }
 
-/* --------------------------------------------------------
-  2. Global Styles
--------------------------------------------------------- */
-html {
-  font-size: 16px;
+html, body {
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--ff-serif);
-  color: var(--navy);
+  font-family: "Merriweather", serif;
+  color: var(--font-main);
+  position: relative;
+  width: 100%;
 }
 
 .text-gold {
-  color: var(--gold);
+  color: var(--font-gold);
 }
 
-/* --------------------------------------------------------
-  3. Section and Containers
--------------------------------------------------------- */
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section {
-  background-image: url("/img/bg-texture.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-/* --------------------------------------------------------
-  4. Base Elements and Components
--------------------------------------------------------- */
-main {}
-
-a {
-  text-decoration: none;
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* --------------------------------------------------------
-  5. Landing page
--------------------------------------------------------- */
-.landing {
-  gap: 4em;
+.fullscreen-page {
   height: 100vh;
   height: 100svh;
   overflow: hidden;
 }
 
-.landing__logo {
-  width: var(--size-5xl);
-  height: auto;
+section {
+  background-image: url("/img/bg-texture.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.landing__text {
-  gap: 2.5em;
-  text-align: center;
+.pattern-image {
+  background-image: url("/img/pattern-top.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: top;
+  height: 90px;
 }
 
-.landing__text-byname {
-  font-size: var(--size-xl);
-}
-
-.landing__text-greeting {
-  font-size: var(--size-base);
-}
-
-.landing__text-bride {
-  text-transform: uppercase;
-  font-size: var(--size-3xl);
-  letter-spacing: 0.1em;
-  text-shadow: 2px 2px 4px #AAA;
-}
-
-.landing__button {
-  font-size: var(--size-base);
-  padding: 0.75em 2em;
-  border-radius: 2rem;
-  background-color: var(--navy);
-  color: var(--white);
-  box-shadow: 4px 4px 4px #888;
-}
-
-.landing__pattern {
-  position: absolute;
-  object-fit: cover;
-  object-position: right;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pattern-top {
-  top: 0;
-  object-position: bottom;
-  height: 12vh;
-}
+.pattern-top {}
 
 .pattern-bottom {
-  bottom: 0;
-  object-position: bottom;
-  height: 12vh;
   transform: rotate(180deg);
 }
 
-/* Responsive Breakpoints */
-/* xs */
-/*@media (min-width: 475px) {}*/
-
-/* sm */
-@media (min-width: 640px) {
-  .pattern-top {
-    height: 15vh;
-  }
-
-  .pattern-bottom {
-    height: 15vh;
-  }
-}
-
-/* md */
-/*@media (min-width: 768px) {}*/
-
-/* lg */
-/*@media (min-width: 1024px) {}*/
-
-/* xl */
-/*@media (min-width: 1280px) {}*/
-
-/* 2xl */
-/*@media (min-width: 1536px) {}*/
-
-/* --------------------------------------------------------
-  6. Details page
--------------------------------------------------------- */
-.details {
-  padding-top: 4rem;
-  padding-right: 2rem;
-}
-
-/* Highlight every element containers ------------------ */
-.details > * {
-  border: 2px dashed red;
-  margin-bottom: 4rem;
-}
-
-/* Embelishment ---------------------------------------- */
-.details__embelishment {
-  content: "";
-  background-image: url("/img/pattern-side-2.svg");
-  background-position: left;
+.pattern-image-y {
+  background-image: url("/img/pattern-side.svg");
   background-repeat: repeat-y;
-  z-index: 1;
-  width: 2rem;
-  height: 200vh;
-  position: absolute;
-  right: 0;
-  overflow-y: hidden;
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 100%;
 }
 
-.test-side {
-  position: absolute;
-  object-fit: cover;
-  object-position: left;
-  overflow-y: hidden;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 2rem;
+.pattern-left {}
+
+.pattern-right {
+  transform: rotate(180deg);
 }
 
-/* Opening section ------------------------------------- */
-.details__opening {
-/*  display: none;*/
+.pattern-details {
+  background-image: url("/img/pattern-side-2.svg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: top;
+  width: 40px;
+  height: 100%;
 }
 
-.details__opening-image {
-  width: 150px;
-  height: auto;
-}
-
-.details__opening-text {
-  gap: 1rem;
-  text-align: center;
-  padding-inline: 2em;
-}
-
-/* Main section ---------------------------------------- */
-.details__main {}
-
-.details__main-text-bride {
-  text-align: center;
-  gap: 2em;
-  padding-inline: 1em;
-}
-
-.details__main-text-event {
-  text-align: center;
-  gap: 2rem;
-}
-
-.details__main-text-location {
-  gap: 0.25rem;
+.my__card {
+  border: 2px solid var(--font-main); !important;
 }

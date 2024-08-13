@@ -1,8 +1,24 @@
 {{ define "main" }}
-  {{ .Content }}
-  <hr>
-  <p>Invited guests:</p>
 
+<section class="hero">
+  <div class="container fullscreen-page d-flex justify-content-center align-items-center text-center">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="fs-4 mb-3">The Wedding Of</h4>
+        <h1 class="text-uppercase text-gold">Anggi & Odhy</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+Delete this section instead of just display: none.
+The data would still be there.
+Remove after development is completed/invitation is released.
+-->
+<div class="d-block container border my-5">
+  <p>Invited guests:</p>
   <ol>
     {{ range .Site.Pages }}
       {{ if and (eq .File.BaseFileName "_index") (ne .Layout "home") }}
@@ -12,5 +28,6 @@
       {{ end }}
     {{ end }}
   </ol>
+</div>
 
 {{ end }}
