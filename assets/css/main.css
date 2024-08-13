@@ -6,6 +6,8 @@
 body {
   font-family: "Merriweather", serif;
   color: var(--font-main);
+  overflow-x: hidden;
+  position: relative;
 }
 
 .text-gold {
