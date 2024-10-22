@@ -1,0 +1,20 @@
+baseURL = 'https://wedding-invitation.vercel.app/'
+languageCode = 'en-us'
+title = 'Wedding Invitation'
+theme = 'wedding-invitation'
+
+# Page custom parameters
+[Params]
+  description = "A wedding invitation website"
+
+# Author information
+[Params.Author]
+  fullname = "Odhy Pradhana"
+  email = "pradhana.odhy@gmail.com"
+  github = "odhyp"
+
+# Hugo Module version
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.133.1"

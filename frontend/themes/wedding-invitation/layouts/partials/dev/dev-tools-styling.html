@@ -1,0 +1,6 @@
+{{ if hugo.IsServer }}
+<div class="fixed top-0 left-0 z-50 mt-4 ml-4">
+    {{- partial "dev/size-indicator.html" . -}}
+    {{- partial "dev/section-indicator.html" . -}}
+</div>
+{{ end }}
