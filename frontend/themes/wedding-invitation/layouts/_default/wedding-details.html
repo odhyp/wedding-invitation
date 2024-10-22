@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}" class="no-scrollbar">
+  {{ partial "head.html" . }}
+
+  <script>
+    function copyToClipboard(text) {
+      // Create a temporary textarea element to hold the text
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+
+      try {
+        // Copy the text to clipboard
+        document.execCommand("copy");
+
+        // Update copy status text
+        const copyStatus = document.getElementById("copy-status");
+        copyStatus.textContent = "Bank account copied!";
+
+        // Reset the status text after 1.5 seconds
+        setTimeout(() => {
+          copyStatus.textContent = "Press to copy!";
+        }, 1500);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+      }
+
+      // Remove the temporary textarea element
+      document.body.removeChild(textarea);
+    }
+  </script>
+
+  <body
+    class="no-scrollbar bg-cover bg-center"
+    style="background-image: url(&quot;/img/body.jpg&quot;)"
+  >
+    <!-- DETAILS PAGE -->
+    <main
+      class="font-sitka mx-auto w-screen overflow-x-hidden sm:max-w-screen-lg"
+    >
+      <div
+        class="grid min-h-full w-full grid-cols-12 items-start justify-start gap-0 bg-contain bg-center bg-repeat"
+        style="background-image: url(&quot;/img/background.jpg&quot;)"
+      >
+        <!-- IMAGE MODAL START -->
+        <div
+          id="imageModal"
+          class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-85 px-2"
+        >
+          <span
+            id="closeModal"
+            class="absolute right-4 top-4 cursor-pointer text-3xl text-white"
+            >&times;</span
+          >
+          <img id="modalImg" class="max-h-full max-w-full" />
+        </div>
+        <!-- IMAGE MODAL END -->
+
+        <!-- MAIN CONTENT START -->
+        <!-- I use gap-8 because the logo image has margin-y -->
+        <div
+          class="relative col-span-11 flex flex-col items-center justify-center gap-8 px-4 pt-8 md:gap-16 md:px-12 lg:px-16"
+        >
+          <!-- #################### START HERE! #################### -->
+          <!-- AUDIO PLAYER START -->
+          <section
+            class="flex flex-col items-center justify-center gap-4"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
+            <button
+              id="playPauseBtn"
+              class="flex flex-row items-center gap-2 px-3 py-2"
+            >
+              <svg
+                id="playIcon"
+                class="text-custom-blue size-3"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <svg
+                id="pauseIcon"
+                class="text-custom-blue hidden size-3"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <p
+                class="text-custom-blue text-xs drop-shadow-sm md:text-sm lg:text-base"
+              >
+                Canon in D - Pachelbel (by Kassia)
+              </p>
+            </button>
+            <audio id="audioPlayer" src="/img/music.mp3" loop></audio>
+          </section>
+          <!-- AUDIO PLAYER END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- OPENING SECTION START -->
+          <section
+            class="my-8 flex flex-col items-center justify-center gap-12 md:gap-16 lg:gap-20"
+          >
+            <div
+              class="grid w-full grid-cols-2 items-center gap-4 lg:gap-8"
+              data-aos="fade-up"
+            >
+              <div class="h-auto w-full overflow-hidden shadow-md">
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/600x600"
+                />
+              </div>
+              <div class="h-auto w-full overflow-hidden shadow-md">
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/600x600"
+                />
+              </div>
+            </div>
+            <div
+              class="w-full max-w-lg text-center text-sm md:text-base lg:text-lg"
+            >
+              <p
+                class="text-custom-blue italic drop-shadow-sm"
+                data-aos="fade-up"
+              >
+                And it is among His sign that He has created for you wives from
+                among yourselves, so that you may find tranquility in them and
+                He has created love and kindness between you. Surely in this
+                there are signs for a people who reflect.
+              </p>
+              <p class="text-custom-gold drop-shadow-sm" data-aos="fade-up">
+                QS Ar-Rum : 21
+              </p>
+            </div>
+            <div
+              class="h-auto w-full overflow-hidden shadow-md"
+              data-aos="fade-up"
+            >
+              <img
+                class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                src="https://placehold.co/1200x800"
+              />
+            </div>
+          </section>
+          <!-- OPENING SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- BRIDE AND GROOM SECTION START -->
+          <section
+            class="my-8 flex flex-col items-center justify-center gap-12 md:gap-16 lg:gap-20"
+          >
+            <!-- Bride and Groom Name -->
+            <div
+              class="text-custom-blue flex flex-col items-center gap-4 text-center"
+            >
+              <p class="text-base lg:text-xl" data-aos="fade-up">
+                Together with the family,
+              </p>
+              <div data-aos="fade-up">
+                <h2 class="text-xl font-bold sm:text-2xl lg:text-4xl">
+                  Bride Full Name
+                </h2>
+                <p class="text-sm italic sm:text-lg lg:text-xl">
+                  The daughter of Mr. Lorem<br />& Mrs. Ipsum
+                </p>
+              </div>
+              <p
+                class="text-custom-gold text-base italic lg:text-xl"
+                data-aos="fade-up"
+              >
+                and
+              </p>
+              <div data-aos="fade-up">
+                <h2 class="text-xl font-bold sm:text-2xl lg:text-4xl">
+                  Groom Full Name
+                </h2>
+                <p class="text-sm italic sm:text-lg lg:text-xl">
+                  The son of Mr. Lorem<br />& Mrs. Ipsum
+                </p>
+              </div>
+            </div>
+
+            <p
+              class="text-custom-blue w-full max-w-lg text-center text-base leading-tight lg:text-xl"
+              data-aos="fade-up"
+            >
+              We'd like to request the pleasure of your company on our wedding
+              day that will be held on:
+            </p>
+
+            <!-- Time, date, and venue -->
+            <div
+              class="text-custom-blue flex flex-col items-center gap-y-12 text-center lg:flex-row lg:justify-center lg:gap-x-24"
+            >
+              <div
+                class="text-custom-blue flex flex-col items-center gap-1"
+                data-aos="fade-up"
+              >
+                <h3 class="text-custom-gold text-3xl font-bold lg:text-4xl">
+                  Wedding Ceremony
+                </h3>
+                <p class="text-base lg:text-lg">
+                  Saturday, October 5<sup>th</sup> 2024
+                </p>
+                <p class="text-lg font-bold lg:text-xl">08.00 - 10.00</p>
+                <div class="leading-none">
+                  <p class="text-lg font-bold lg:text-xl">Venue Name</p>
+                  <p class="text-base lg:text-lg">Venue Location</p>
+                </div>
+              </div>
+              <div
+                class="text-custom-blue flex flex-col items-center gap-1"
+                data-aos="fade-up"
+              >
+                <h3 class="text-custom-gold text-3xl font-bold lg:text-4xl">
+                  Wedding Reception
+                </h3>
+                <p class="text-base lg:text-lg">
+                  Sunday, October 6<sup>th</sup> 2024
+                </p>
+                <p class="text-lg font-bold lg:text-xl">10.00 - 12.00</p>
+                <div class="leading-none">
+                  <p class="text-lg font-bold lg:text-xl">Venue Name</p>
+                  <p class="text-base lg:text-lg">Venue Location</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div
+              class="border-custom-blue flex items-center justify-center rounded border-2 md:h-80 md:w-full lg:h-96"
+              data-aos="zoom-in"
+            >
+              <iframe
+                class="h-full w-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2183765161717!2d112.6318416748081!3d-7.976367679520048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6283c7e9abbd3%3A0xcce9af9698d6a3a5!2sSMA%20Negeri%204%20Malang!5e0!3m2!1sen!2sid!4v1729519776499!5m2!1sen!2sid"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </section>
+          <!-- BRIDE AND GROOM SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- QUOTES SECTION START -->
+          <section
+            class="my-8 flex flex-col items-center justify-center gap-12 md:gap-16 lg:gap-20"
+          >
+            <div class="grid grid-cols-6 items-center gap-2 md:gap-4 lg:gap-8">
+              <div
+                class="col-span-4 overflow-hidden shadow-md"
+                data-aos="fade-right"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/1200x800"
+                />
+              </div>
+              <p
+                class="text-custom-blue col-span-2 text-xs italic md:text-base lg:text-lg"
+                data-aos="fade-left"
+              >
+                "Lorem ipsum dolor sit amet ...
+              </p>
+            </div>
+            <div class="grid grid-cols-6 items-center gap-2 md:gap-4 lg:gap-8">
+              <p
+                class="text-custom-blue col-span-2 text-right text-xs italic md:text-base lg:text-lg"
+                data-aos="fade-right"
+              >
+                ...consectetur adipisicing elit.
+              </p>
+              <div
+                class="col-span-4 overflow-hidden shadow-md"
+                data-aos="fade-left"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/1200x800"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-6 items-center gap-2 md:gap-4 lg:gap-8">
+              <div
+                class="col-span-4 overflow-hidden shadow-md"
+                data-aos="fade-right"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/1200x800"
+                />
+              </div>
+              <p
+                class="text-custom-blue col-span-2 text-xs italic md:text-base lg:text-lg"
+                data-aos="fade-left"
+              >
+                Perspiciatis, corporis....
+              </p>
+            </div>
+            <div class="grid grid-cols-6 items-center gap-2 md:gap-4 lg:gap-8">
+              <p
+                class="text-custom-blue col-span-2 text-right text-xs italic md:text-base lg:text-lg"
+                data-aos="fade-right"
+              >
+                ...Consectetur facere fuga a est?"
+              </p>
+              <div
+                class="col-span-4 overflow-hidden shadow-md"
+                data-aos="fade-left"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded-sm object-cover"
+                  src="https://placehold.co/1200x800"
+                />
+              </div>
+            </div>
+            <p
+              class="text-custom-blue text-center text-sm italic md:text-base lg:text-xl"
+              data-aos="fade-up"
+            >
+              Tempore incidunt similique distinctio,<br />nemo vel saepe quasi
+              dicta quidem.
+            </p>
+          </section>
+          <!-- QUOTES SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- GIFT SECTION START -->
+          <section
+            class="my-8 flex flex-col items-center justify-center gap-8 md:gap-12 lg:gap-16"
+          >
+            <div
+              class="text-custom-blue flex w-full max-w-lg flex-col items-center gap-4"
+            >
+              <h3
+                class="text-2xl font-bold md:text-3xl lg:text-4xl"
+                data-aos="fade-up"
+              >
+                Wedding Gifts
+              </h3>
+              <p
+                class="text-center text-sm md:text-base lg:text-lg"
+                data-aos="fade-up"
+              >
+                Your presence and well wishes are the best wedding gifts we
+                could ask for! However, if you'd like to express your excitement
+                with a gift, feel free to contact us for our address. If you'd
+                prefer to give a cash gift, here are our bank account details:
+              </p>
+            </div>
+            <div
+              class="text-custom-blue grid grid-cols-1 items-center justify-center gap-x-4 gap-y-4 sm:grid-cols-2 md:gap-x-8 lg:gap-x-12 lg:gap-y-8"
+              data-aos="zoom-in"
+            >
+              <!-- Bride -->
+              <button
+                onclick="copyToClipboard('123456789')"
+                class="border-custom-blue flex flex-col items-center rounded-lg border-2 px-8 py-4"
+              >
+                <div
+                  class="flex flex-col items-center gap-2 text-base md:text-lg lg:text-xl"
+                >
+                  <div class="flex flex-row items-baseline gap-1">
+                    <p class="font-semibold">Lorem Bank</p>
+                    <p id="bca-account">123456789</p>
+                  </div>
+                  <p>a.n. Your Name</p>
+                </div>
+              </button>
+
+              <!-- Odhy -->
+              <button
+                onclick="copyToClipboard('123456789')"
+                class="border-custom-blue flex flex-col items-center rounded-lg border-2 px-8 py-4"
+              >
+                <div
+                  class="flex flex-col items-center gap-2 text-base md:text-lg lg:text-xl"
+                >
+                  <div class="flex flex-row items-baseline gap-1">
+                    <p class="font-semibold">Ipsum Bank</p>
+                    <p id="jago-account">123456789</p>
+                  </div>
+                  <p>a.n. Your Name</p>
+                </div>
+              </button>
+
+              <p
+                id="copy-status"
+                class="text-custom-blue text-center text-xs italic text-opacity-85 sm:col-span-2 md:text-sm lg:text-base"
+              >
+                Press to copy!
+              </p>
+            </div>
+          </section>
+          <!-- GIFT SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- WISHES FORM SECTION START -->
+          <section class="my-8 flex flex-col items-center justify-center gap-8">
+            <div class="text-custom-blue text-center">
+              <h3
+                class="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl"
+                data-aos="fade-up"
+              >
+                Best Wishes
+              </h3>
+              <p
+                class="text-sm md:text-base lg:max-w-prose lg:text-lg"
+                data-aos="fade-up"
+              >
+                We'd love to hear from you! Leave your heartfelt message and let
+                us know if you'll be celebrating with us.
+              </p>
+            </div>
+            <form
+              class="text-custom-blue border-custom-blue flex w-full flex-col gap-4 rounded border-2 p-6 text-sm lg:max-w-prose"
+              name="wishesForm"
+              onsubmit="return validateForm()"
+              method="post"
+              data-aos="fade-up"
+            >
+              <!-- POST Wishes -->
+              <input
+                class="border-custom-blue rounded text-sm"
+                placeholder="Name"
+                type="text"
+              />
+              <textarea
+                class="border-custom-blue rounded text-sm"
+                placeholder="Wishes"
+                type="text"
+                rows="4"
+              ></textarea>
+              <div class="mx-auto flex flex-col gap-2">
+                <p class="text-center font-bold lg:text-lg">Attendance:</p>
+                <div class="flex flex-row items-center justify-start gap-2">
+                  <input type="radio" id="attendance-yes" name="attendance" />
+                  <label class="lg:text-base" for="attendance-yes"
+                    >I will attend</label
+                  >
+                </div>
+                <div class="flex flex-row items-center justify-start gap-2">
+                  <input type="radio" id="attendance-no" name="attendance" />
+                  <label class="lg:text-base" for="attendance-no"
+                    >I can't attend</label
+                  >
+                </div>
+              </div>
+
+              <p
+                id="error-message"
+                class="text-custom-gold hidden text-center text-xs italic md:text-sm lg:text-base"
+              >
+                Please fill in all fields!
+              </p>
+              <button
+                class="bg-custom-blue flex flex-row items-center justify-center gap-2 rounded px-4 py-2 text-white hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-50 lg:text-base"
+                type="submit"
+              >
+                Send
+              </button>
+              <hr class="border-custom-blue border-t-2" />
+
+              <!-- GET Wishes -->
+              <div
+                id="data-container"
+                class="flex h-60 w-full flex-col gap-3 overflow-scroll lg:text-base"
+              >
+                <div>
+                  <p class="font-bold">Sample Person</p>
+                  <p>
+                    Congratulations on your marriage. I wish you both the best!
+                  </p>
+                  <p class="text-xs">Oct 4, 2024</p>
+                </div>
+              </div>
+            </form>
+          </section>
+          <!-- WISHES FORM SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- GALLERY SECTION START -->
+          <section
+            class="text-custom-blue my-8 flex flex-col items-center justify-center gap-4"
+          >
+            <div class="text-center">
+              <h3
+                class="text-2xl font-bold md:text-3xl lg:text-4xl"
+                data-aos="fade-up"
+              >
+                Our Best Moments
+              </h3>
+            </div>
+            <div class="grid grid-cols-2 gap-2 md:gap-4 lg:gap-4">
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+              <div
+                class="h-auto w-auto overflow-hidden shadow-md md:w-56 lg:w-72"
+                data-aos="zoom-in"
+              >
+                <img
+                  class="modal-trigger h-full w-full cursor-pointer rounded object-cover"
+                  src="https://placehold.co/1080x1920"
+                />
+              </div>
+            </div>
+          </section>
+          <!-- GALLERY SECTION END -->
+
+          <img
+            class="size-10 md:size-12 lg:size-14"
+            src="/img/logo.svg"
+            data-aos="fade-up"
+          />
+
+          <!-- CLOSING SECTION START -->
+          <section
+            class="text-custom-blue my-8 flex flex-col items-center justify-center gap-4"
+          >
+            <h3
+              class="text-custom-gold text-2xl font-semibold md:text-3xl lg:text-4xl"
+              data-aos="fade-up"
+            >
+              Dear {{ .Title }},
+            </h3>
+            <div class="flex flex-col text-center" data-aos="fade-up">
+              <p class="text-sm leading-snug md:text-base lg:text-lg">
+                Thank you for sharing in our joy and for being<br />a part of
+                this unforgettable moment in our lives.
+              </p>
+              <p class="mt-2 text-xs font-bold italic md:text-sm lg:text-base">
+                Bride & Groom
+              </p>
+            </div>
+          </section>
+          <!-- CLOSING SECTION END -->
+
+          <!-- FOOTER START -->
+          <section
+            class="mt-8 flex flex-col items-center justify-center gap-4 pb-12"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div
+              class="text-custom-blue space-y-1 text-center text-sm md:text-base lg:text-lg"
+            >
+              <p>
+                Design by
+                <a
+                  class="font-semibold"
+                  href="https://www.instagram.com/psychoctator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bride Permata
+                  <svg
+                    class="inline size-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </p>
+
+              <p>
+                Code by
+                <a
+                  class="font-semibold"
+                  href="https://odhyp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Odhy Pradhana
+                  <svg
+                    class="inline size-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </p>
+
+              <p>
+                API by
+                <a
+                  class="font-semibold"
+                  href="https://alfalakhie-portfolio.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Firdig Alfalakhi
+                  <svg
+                    class="inline size-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </p>
+
+              <p>
+                Music by
+                <a
+                  class="font-semibold"
+                  href="https://www.youtube.com/watch?v=6jSLH9CDPPQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kassia
+                  <svg
+                    class="inline size-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </p>
+            </div>
+            <p class="text-custom-blue mt-8 text-sm md:text-base lg:text-lg">
+              &copy; {{ now.Year }} {{ .Site.Params.Author.fullname }}. All
+              Rights Reserved.
+            </p>
+          </section>
+          <!-- FOOTER END -->
+        </div>
+        <!-- MAIN CONTENT END -->
+
+        <!-- SIDE EMBELISHMENT START -->
+        <div
+          class="min-h-full bg-contain bg-left-top bg-repeat-y"
+          style="background-image: url(&quot;/img/detail-side.svg&quot;)"
+          data-aos="fade-left"
+          data-aos-duration="300"
+          data-aos-delay="500"
+        ></div>
+        <!-- SIDE EMBELISHMENT END -->
+      </div>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      AOS.init({
+        duration: 750, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+      });
+    </script>
+  </body>
+</html>

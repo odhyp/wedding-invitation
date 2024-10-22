@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+
+  <body>
+    <!-- FULL WIDTH AND HEIGHT PAGE, NO HEADER AND FOOTER FOR LANDING -->
+    <main class="font-sitka h-dvh overflow-hidden sm:h-screen">
+      <div
+        class="flex h-full w-full items-center justify-center bg-cover bg-center"
+        style="background-image: url(&quot;/img/background.jpg&quot;)"
+      >
+        <div class="relative flex flex-col items-center justify-center gap-16">
+          <img
+            class="size-10 md:size-12 xl:size-14"
+            src="/img/logo.svg"
+            data-aos="zoom"
+            data-aos-delay="2200"
+          />
+          <div
+            class="flex flex-col items-center justify-center gap-6 lg:gap-12"
+          >
+            <h2
+              class="text-custom-blue text-center text-3xl font-bold md:text-4xl lg:text-5xl"
+              data-aos="zoom"
+              data-aos-delay="2400"
+            >
+              {{ .Title }},
+            </h2>
+            <h2
+              class="text-custom-blue text-center text-xl leading-tight md:text-2xl lg:text-3xl"
+              data-aos="zoom"
+              data-aos-delay="2600"
+            >
+              You are invited<br />to The Wedding of
+            </h2>
+            <h1
+              class="text-custom-gold text-4xl font-bold uppercase drop-shadow-md md:text-5xl lg:text-6xl"
+              data-aos="zoom"
+              data-aos-delay="2800"
+            >
+              Bride & Groom
+            </h1>
+          </div>
+          <a
+            class="bg-custom-blue rounded-full px-6 py-2 text-white shadow-xl transition-transform duration-500 ease-out hover:scale-95 md:text-lg"
+            href="{{ .RelPermalink }}/details"
+            data-aos="zoom"
+            data-aos-delay="3000"
+            >Open Invitation</a
+          >
+
+          <!-- LANDING PATTERN IMAGES START -->
+          <!-- TOP -->
+          <div
+            class="fixed -top-1 h-32 w-full overflow-hidden md:hidden"
+            data-aos="fade-down"
+            data-aos-delay="500"
+          >
+            <div class="animate-marquee-lr flex w-[200%]">
+              <div
+                class="h-32 w-[100%] bg-[url('/img/landing-top.png')] bg-contain bg-top bg-no-repeat"
+              ></div>
+              <div
+                class="h-32 w-[100%] bg-[url('/img/landing-top.png')] bg-contain bg-top bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+
+          <!-- BOTTOM -->
+          <div
+            class="fixed -bottom-1 h-32 w-full overflow-hidden md:hidden"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="animate-marquee-rl flex w-[200%]">
+              <div
+                class="h-32 w-[100%] bg-[url('/img/landing-bottom.png')] bg-contain bg-bottom bg-no-repeat"
+              ></div>
+              <div
+                class="h-32 w-[100%] bg-[url('/img/landing-bottom.png')] bg-contain bg-bottom bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+
+          <!-- LEFT -->
+          <div
+            class="fixed -left-1 hidden h-full w-32 overflow-hidden md:block"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          >
+            <div class="animate-marquee-tb flex h-[200%] flex-col">
+              <div
+                class="h-[100%] w-auto bg-[url('/img/landing-left.png')] bg-contain bg-left bg-no-repeat"
+              ></div>
+              <div
+                class="h-[100%] w-auto bg-[url('/img/landing-left.png')] bg-contain bg-left bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div
+            class="fixed -right-1 hidden h-full w-32 overflow-hidden md:block"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          >
+            <div class="animate-marquee-bt flex h-[200%] flex-col">
+              <div
+                class="h-[100%] w-auto bg-[url('/img/landing-right.png')] bg-contain bg-right bg-no-repeat"
+              ></div>
+              <div
+                class="h-[100%] w-auto bg-[url('/img/landing-right.png')] bg-contain bg-right bg-no-repeat"
+              ></div>
+            </div>
+          </div>
+          <!-- LANDING PATTERN IMAGES END -->
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      AOS.init({
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease-in", // default easing for AOS animations
+      });
+    </script>
+  </body>
+</html>
