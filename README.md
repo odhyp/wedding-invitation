@@ -2,6 +2,8 @@
 
 A simple wedding invitation built with Hugo and TailwindCSS
 
+TODO: add quickstart
+
 ## Running site on local connection
 
 ```bash
@@ -43,5 +45,11 @@ TODO: update this
 1. Create `.env` file and
 
    ```bash
-   SOMETHING=
+   SUPABASE_PASS=
+
+   # Connect to Supabase via connection pooling with Supavisor.
+   DATABASE_URL=
+
+   # Direct connection to the database. Used for migrations.
+   DIRECT_URL=
    ```
